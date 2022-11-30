@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body{
+    background-color: #192026 !important;
+}
+
+nav .brand{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+nav .search, nav .search:focus{
+    background-color: #374151;
+    border: 0;
+    border-radius: 37px;
+    color: #fff;
+}
+
+.sub-title{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.explore p{
+    color: #868686;
+}
+
+.explore img{
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+}
+
+.explore .image-explore{
+    position: relative;
+}
+
+.explore .image-explore .shadow{
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(77deg,rgba(0,0,0,.6),transparent 85%);
+    position: absolute;
+    border-radius: 12px;
+    top: 0;
+}
+
+.explore .desc-explore{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: #fff;
+    width: 45%;
+}
+
+.explore .desc-explore h1{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.explore .desc-explore p{
+    color: #fff;
+}
+
+.card-img{
+    position: relative;
+    width: 200px !important;
+    height: 350px;
+    transition: .5s ease-in-out;
+}
+
+.card-img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.card-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.card-img .shadow-card {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(5deg,rgba(0, 0, 0, 1),transparent 85%);
+    position: absolute;
+    top: 0;
+    border-radius: 12px;
+}
+
+.card-img .desc-card{
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+}
+
+footer img{
+    width: 30px;
+}
+
+footer .nav a, footer p{
+    color: #868686;
+    text-decoration: none;
+}
+
+footer .brand-footer{
+    font-weight: 700;
+}
+
+.detail .detail-desc img{
+    width: 300px;
+    border-radius: 12px;
+}
+
+.detail .detail-desc .description h5{
+    color: #fff;
+}
+.detail .detail-desc .description p, .synopsis p{
+    color: #868686;
+}
+
+.detail h4{
+    font-size: 1.2rem;
+}
+
+.detailMovie .container .detail-desc .description{
+    margin-left: 1.5em;
+}
+
+.detailMovie .container .synopsis{
+    padding-top: 3em;
+}
+
+.populars {
+    width: 350px;
+    overflow: hidden;
+}
+.populars img{
+    width: 150px;
+    border-radius: 12px;
+}
+
+.movie{
+    width: fit-content;
+}
+
+.movie a{
+    display: inline-block;
+    width: fit-content;
+}
+
+@media only screen and (max-width: 1200px) {
+    .detailMovie .container{
+        flex-direction: column;
+    }
+
+    .detailMovie .container .synopsis{
+        margin-bottom: 3em;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .explore .desc-explore h1{
+        font-size: 1.2rem;
+    }
+
+    .explore .desc-explore p, .explore p{
+        font-size: .8rem;
+    }
+
+    .detailMovie .container .detail-desc{
+        flex-direction: column;
+    }
+
+    .detailMovie .container .synopsis{
+        padding-top: 0;
+    }
+
+    .detailMovie .container .detail-desc .description{
+        margin-top: 2em;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .explore .desc-explore{
+        left: 20px;
+        bottom: 20px;
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .detail .detail-desc img{
+        width: 100%;
+    }
+
+    .movie{
+        display: flex;
+        justify-content: center;
+    }
+
+    .populars{
+        width: 200px;
+    }
+    .populars img{
+        width: 80px;
+    }
+
+    footer .container{
+        flex-direction: column-reverse;
+    }
+
+    footer .foot-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer p{
+        font-size: .8rem;
+    }
+}

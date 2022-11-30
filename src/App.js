@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Footer } from './component/Footer';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import NewRelease from './component/NewRelease';
+import HomeContainer from './container/HomeContainer';
+import Navigationbar from './component/Navigationbar';
+import MovieContainer from './container/MovieContainer';
+import ListMovieContainer from './container/ListMovieContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div>
+        <BrowserRouter>
+          <Navigationbar/>
+          <Routes>
+            <Route path='/' element={<HomeContainer/>}/>
+            <Route path='/list' element={<ListMovieContainer/>}/>
+            <Route path='/detail/:id' element={<MovieContainer/>} />
+          </Routes>
+          <Footer/>
+        </BrowserRouter>
+      </div>
+    </Provider>
   );
 }
 
